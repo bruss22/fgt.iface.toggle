@@ -9,8 +9,8 @@ import time
 import random
 urllib3.disable_warnings()
 date = datetime.datetime.now()
-apiurl = 'https://xxx.xxx.xxx.xxx/api/v2/cmdb/system/interface/portxxx'
-apitoken = 'Your API token'
+apiurl = 'https://10.10.20.50/api/v2/cmdb/system/interface/port3'
+apitoken = '19q57y0Nzxms3qxmqcdGNpNky4fkdc'
 headers = {'Authorization': "Bearer {}".format(apitoken)}
 interface = requests.get(apiurl, headers=headers, verify=False)
 results = interface.json()
@@ -27,7 +27,7 @@ while True:
                 status = requests.get(apiurl, headers=headers, verify=False)
                 state = status.json()
                 data = state.get('results')
-                print(f'Status is now {data[0]['status']}')
+                print(f"Status is now {data[0]['status']}")
             if x['status'] == 'down':
                 print('Switching from down to up')
                 up = {'status': 'up'}
@@ -36,9 +36,11 @@ while True:
                 status = requests.get(apiurl, headers=headers, verify=False)
                 state = status.json()
                 data = state.get('results')
-                print(f'Status is now {data[0]['status']}')
+                print(f"Status is now {data[0]['status']}")
             print(f'Sleeping for {zzz}')
             time.sleep(zzz)
     except Exception as e:
         print(e)
+
+
 
