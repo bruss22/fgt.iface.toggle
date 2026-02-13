@@ -9,8 +9,8 @@ import time
 import random
 urllib3.disable_warnings()
 date = datetime.datetime.now()
-apiurl = 'https://10.10.20.50/api/v2/cmdb/system/interface/port3'
-apitoken = '19q57y0Nzxms3qxmqcdGNpNky4fkdc'
+apiurl = 'https://xxx.xxx.xxx.xxx/api/v2/cmdb/system/interface/INTERFACE'
+apitoken = 'API-TOKEN'
 headers = {'Authorization': "Bearer {}".format(apitoken)}
 interface = requests.get(apiurl, headers=headers, verify=False)
 results = interface.json()
