@@ -24,11 +24,11 @@ pip3 install requests<br>
 Configuration<br>
 All configuration is hard-coded in the script and must be edited before running.<br>
 	•	FortiGate API URL<br>
-		- apiurl = "https://<FORTIGATE_IP>/api/v2/cmdb/system/interface/<INTERFACE>"<br>
+			&nbsp;&nbsp;&nbsp;&nbsp; -apiurl = "https://<FORTIGATE_IP>/api/v2/cmdb/system/interface/<INTERFACE>"<br>
 	•	API token from Fortigate DUT<br>
-		- apitoken = "<REDACTED_API_TOKEN>"<br>
+			&nbsp;&nbsp;&nbsp;&nbsp; - apitoken = "<REDACTED_API_TOKEN>"<br>
 	•	Sleep interval range<br>
-		- zzz = random.uniform(30, 180)<br>
+			&nbsp;&nbsp;&nbsp;&nbsp; - zzz = random.uniform(30, 180)<br>
 
 Usage<br>
 ```python
