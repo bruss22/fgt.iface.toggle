@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-import ssl
 import requests
 import urllib3
 import time
-import json
 import datetime
 import time
 import random
